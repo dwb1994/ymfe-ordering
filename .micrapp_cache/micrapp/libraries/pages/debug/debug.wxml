@@ -1,0 +1,48 @@
+<!--
+@Author: 韩玉 <a1>
+@Date:   2017-07-28T16:42:07+08:00
+@Filename: debug.wxml
+@Last modified by:   a1
+@Last modified time: 2017-07-31T18:46:28+08:00
+-->
+
+<view>
+    <view wx:if="{{!isEdit}}">
+        <button wx:if="{{hasTrain}}" class="operate-first-btn" bindtap="jumpTrainDebug">TRAIN DEBUG</button>
+        <button class="operate-first-btn" bindtap="jumpSchemeDebug">跳转任意页面</button>
+        <button class="operate-btn" bindtap="toggleEditEnv">切换环境信息</button>
+    </view>
+    <view class="header" wx:if="{{isEdit}}">
+        <button type="default" class="header-btn" bindtap="toggleEditEnv">取消</button>
+        <button type="primary" class="header-btn" bindtap="saveEnv">确定</button>
+    </view>
+    <view class="env-info-container" wx:if="{{!isEdit}}">
+        <text>当前环境信息</text>
+        <textarea class="env-info" auto-height maxlength="-1" disabled value="{{envInfo}}"/>
+    </view>
+    <view class="edit-env-container" wx:if="{{isEdit}}">
+        <view class="env-row app">
+            <view class="env-name"><text>app</text></view>
+            <view>
+                <label>环境参数：</label>
+                <input class="env-input" type="text" data-name="app" value="{{envCfg.app}}" bindinput="bindEnvChange" style="display: inline-block"/>
+            </view>
+            <radio-group class="radio-group-env" data-name="app" bindchange="bindEnvChange" style="display: inline-block">
+                <radio value="beta" checked="{{ envCfg.app === 'beta' }}"/>beta
+                <radio value="prod" checked="{{ envCfg.app === 'prod' }}"/>prod
+            </radio-group>
+
+        </view>
+        <view wx:for="{{libs}}" wx:key="{{index}}" class="env-row">
+            <view class="env-name"><text>{{item}}</text></view>
+            <view>
+                <label>环境参数：</label>
+                <input class="env-input" type="text" data-name="{{item}}" value="{{envCfg.modules[item]}}" bindinput="bindEnvChange" style="display: inline-block"/>
+            </view>
+            <radio-group class="radio-group-env" data-name="{{item}}" bindchange="bindEnvChange" style="display: inline-block">
+                <radio value="beta" checked="{{ envCfg.modules[item] === 'beta' }}"/>beta
+                <radio value="prod" checked="{{ envCfg.modules[item] === 'prod' }}"/>prod
+            </radio-group>
+        </view>
+    </view>
+</view>

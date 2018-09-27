@@ -1,0 +1,25 @@
+<!-- index.wxml -->
+<view class="container">
+  <view>
+    <text>test: {{dwbtest}}</text>
+  </view>
+  <!-- <view class="picker-container">
+    <picker-view class="picker" indicator-style="height: 50px;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{days}}" style="line-height: 50px; text-align: center;">{{item}}</view>
+      </picker-view-column>
+    </picker-view><view class="result">{{day}}<text class="text"> 位</text></view>
+  </view>
+  <button class="button" bindtap="buildMenu">生 成</button>
+  <view class="stat">
+    <block wx:if="{{showMenu}}">
+      <text>人均消费约: ￥{{average}}</text>
+    </block>
+  </view>
+
+  <view class="menu-container">
+    <block wx:if="{{showMenu}}">
+      <view wx:for="{{menu}}" class="menu-list-item">{{index+1}}: {{item.name}}<text class="price">￥{{item.price}}</text></view>
+    </block>
+  </view> -->
+</view>

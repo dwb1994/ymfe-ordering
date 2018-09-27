@@ -1,0 +1,21 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "test":"test",
+  "subPackages": [
+    {
+      "root": "packag对对对eA",
+      "pages": [
+        "cat/cat",
+        "dog/dog"
+      ]
+    }
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "YMFE 点餐神器",
+    "navigationBarTextStyle": "white"
+  }
+}

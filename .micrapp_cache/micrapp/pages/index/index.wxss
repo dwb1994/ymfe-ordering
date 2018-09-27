@@ -1,0 +1,70 @@
+/**index.wxss**/
+.container {
+  padding: 24rpx 0;
+  color: rgba(0, 0, 0, .87);
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.picker-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 92%;
+}
+.picker {
+  flex: 1;
+
+}
+.result {
+  flex: 1;
+  text-align: center;
+  font-size: 120rpx;
+  color: #ff561b;
+}
+.text {
+  font-size: 40rpx;
+}
+
+/* 平均值等统计数据 */
+.stat {
+  margin-top: 24rpx;
+}
+
+.menu-container {
+  margin-top: 48rpx;
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  width: 92%;
+}
+.menu-list-item {
+  flex: 0 0 48%;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+  box-shadow: 0 1px 2px 0 rgba(43, 59, 93, 0.29);
+  margin-bottom: 24rpx;
+  font-size:28rpx;
+}
+
+.price {
+  display: block;
+  color: #ff561b;
+}

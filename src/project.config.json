@@ -1,0 +1,11 @@
+{
+  "appid": "wxc15b26bce047a1a9",
+  "projectname": "ymfe-ordering",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  }
+}

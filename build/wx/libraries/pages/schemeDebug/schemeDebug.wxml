@@ -1,0 +1,26 @@
+<!--
+@Author: 韩玉 <a1>
+@Date:   2017-07-31T10:45:00+08:00
+@Filename: schemeDebug.wxml
+@Last modified by:   a1
+@Last modified time: 2017-08-01T15:19:18+08:00
+-->
+
+<view>
+    <view class="pathDesc">请输入跳转页面的url：</view>
+    <textarea
+        class="textarea"
+        value="{{pagePath}}"
+        placeholder="页面路径"
+        maxlength="-1"
+        bindinput="bindPathInput"
+        style="width: {{screenWidth-30}}px"
+    />
+    <button class="operate-btn" bindtap="jumpSchemeDebug">跳转</button>
+
+    <view wx:for="{{historySchemes}}" class="item" wx:key="historyScheme" data-index="{{index}}" bindtap="historyClick">
+        <view class="historyScheme-item">{{historySchemes[index]}}</view>
+    </view>
+
+    <view wx:if="{{!isEmptyHistorySchemes}}" class="historyScheme-item" bindtap="clearHistoryClick">清空记录</view>
+</view>
